@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Oleksandr Dziuma](https://up.htmlacademy.ru/adaptive/19/user/794329).
-* Наставник: `Неизвестно`.
+* Наставник: [Nemo](https://en.wikipedia.org/wiki/Captain_Nemo).
 
 ---
 
