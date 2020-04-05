@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@import "var.scss";
+@import "fonts.scss";
+@import "menu.scss";
+@import "intro.scss";
+@import "button.scss";
+@import "features.scss";
+@import "about.scss";
+@import "page-footer.scss";
+@import "contacts.scss";
+@import "socials.scss";
+@import "copyright.scss";

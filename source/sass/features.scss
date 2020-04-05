@@ -1,0 +1,39 @@
+.features {
+  font-family: $Oswald;
+}
+
+.features__list {
+}
+
+.features__item {
+  background-color: #f2f2f2;
+}
+
+.features__title {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.54;
+  text-align: left;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.features__title--lose {
+}
+.features__text {
+  font-family: $Arial;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+  color: #444444;
+}
+
+.features__link {
+  font-size: 16px;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+  color: #111111;
+}
+.features__title--gain {
+}
