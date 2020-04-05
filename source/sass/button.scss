@@ -8,4 +8,9 @@
 
   background-color: #68b738;
   cursor: pointer;
+
+  &--show-all {
+    color: #444444;
+    background-color: #f2f2f2;
+  }
 }
