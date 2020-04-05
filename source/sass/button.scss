@@ -1,0 +1,16 @@
+.button {
+  font-family: $Oswald;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #68b738;
+  cursor: pointer;
+
+  &--show-all {
+    color: #444444;
+    background-color: #f2f2f2;
+  }
+}

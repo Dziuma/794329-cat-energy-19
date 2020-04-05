@@ -1,0 +1,27 @@
+.intro {
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  font-family: $Oswald;
+  text-align: center;
+  color: #ffffff;
+}
+
+.intro__title {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.intro__text {
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.intro__image {
+}
+.intro__link {
+}
+.button {
+}
