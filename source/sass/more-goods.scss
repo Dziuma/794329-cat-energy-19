@@ -1,18 +1,46 @@
 .more-goods {
 }
 .more-goods__title {
+  font-family: $Oswald;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: left;
+  color: #111111;
 }
+
 .more-goods__list {
 }
 .more-goods__item {
 }
 .more-goods__table {
+  border-collapse: collapse;
 }
+
 .more-goods__caption {
+  font-family: $Oswald;
+  font-size: 16px;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+  color: #222222;
 }
+
 .more-goods__feature {
+  font-family: $Arial;
+  font-size: 14px;
+  line-height: 1;
+  text-align: left;
+  color: #444444;
 }
+
 .more-goods__value {
+  font-family: $Arial;
+  font-size: 14px;
+  line-height: 1;
+  text-align: right;
+  color: #444444;
 }
+
 .more-goods__order {
 }
