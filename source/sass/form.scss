@@ -1,0 +1,51 @@
+.form {
+  label {
+    font-family: $Oswald;
+    font-size: 16px;
+    line-height: 1.13;
+    text-align: left;
+    text-transform: uppercase;
+    color: #222222;
+  }
+
+  input[placeholder] {
+    font-family: $Oswald;
+    font-size: 16px;
+    line-height: 1.13;
+    text-align: left;
+    text-transform: uppercase;
+    color: #444444;
+  }
+
+  legend {
+    font-family: $Oswald;
+    font-size: 24px;
+    line-height: 1;
+    text-align: left;
+    color: #111111;
+  }
+
+  textarea {
+    font-family: $Oswald;
+    font-size: 16px;
+    line-height: 1.13;
+    text-align: left;
+    text-transform: uppercase;
+    color: #444444;
+  }
+}
+.form__info {
+}
+.form__programm {
+}
+.form__contacts {
+}
+.form__submit-btn {
+}
+.form__required {
+  font-family: $Arial;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  color: #444444;
+}
