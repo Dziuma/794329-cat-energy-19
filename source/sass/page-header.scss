@@ -1,0 +1,23 @@
+.page-header {
+  width: 280px;
+  padding: 11px 0;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    width: 708px;
+    padding: 24px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    width: 1220px;
+    padding-top: 53px;
+  }
+}
