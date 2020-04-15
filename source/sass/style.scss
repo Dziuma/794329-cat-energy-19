@@ -2,6 +2,11 @@ body {
   min-width: 320px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -11,6 +16,10 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 @import "var.scss";

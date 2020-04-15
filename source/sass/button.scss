@@ -1,4 +1,6 @@
 .button {
+  display: block;
+
   font-family: $Oswald;
   font-size: 14px;
   line-height: 1.29;
@@ -12,11 +14,5 @@
   &--show-all {
     color: #444444;
     background-color: #f2f2f2;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .button {
-    display: none;
   }
 }
