@@ -1,4 +1,8 @@
 .features {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+
   font-family: $Oswald;
 }
 
@@ -36,4 +40,27 @@
   color: #111111;
 }
 .features__title--gain {
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    width: 768px;
+    padding: 0 30px 30px 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    width: 1220px;
+    padding: 0;
+  }
+
+  .features__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .features__item {
+    width: 570px;
+  }
 }
