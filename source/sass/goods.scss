@@ -1,11 +1,20 @@
 .goods {
+  display: flex;
+  flex-wrap: wrap;
 }
+
 .goods__image-link {
+  width: 140px;
 }
+
 .goods__image {
+  display: block;
 }
+
 .goods__text-container {
+  width: 140px;
 }
+
 .goods__table {
 }
 .goods__title {

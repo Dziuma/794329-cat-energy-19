@@ -1,9 +1,12 @@
 .catalog {
+  width: 320px;
+  margin: 0 auto;
   padding: 0 0 30px;
 }
 
 .catalog__title {
   margin-bottom: 35px;
+  padding: 0 0 0 20px;
 
   font-family: $Oswald;
   font-size: 36px;
@@ -12,14 +15,21 @@
   text-align: left;
   color: #111111;
 }
+
 .catalog__list {
 }
+
 .catalog__item {
+  padding: 0 20px 25px 20px;
 }
+
 .catalog__show-all {
+  padding: 27px 20px 25px 20px;
 }
+
 .catalog__more {
 }
+
 .catalog__order-all {
   display: block;
   min-height: 289px;

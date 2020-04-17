@@ -6,7 +6,7 @@
 
 .intro__wrapper {
   width: 320px;
-  padding: 29px 35px 22px;
+  padding: 29px 20px 22px;
   margin: 0 auto;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -53,25 +53,14 @@
     z-index: -1;
   }
 
-  .intro__link {
+  .button.intro__link {
     width: 245px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .intro {
-    width: 100%;
-    min-height: 696px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    background: linear-gradient(to right, #ffffff 50%, #68b738 50%);
-    background-image: url(../img/index-background-desktop@1x.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
+    min-height: 555px;
   }
 
   .intro__wrapper {
@@ -87,5 +76,6 @@
   .intro__image {
     left: 600px;
     top: 150px;
+    z-index: 0;
   }
 }

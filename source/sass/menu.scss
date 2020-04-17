@@ -19,11 +19,19 @@
 
 @media (min-width: $tablet-width) {
   .menu {
-    width: 478px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .menu__list {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu {
+    width: 1220px;
+    margin: 0 auto;
   }
 }

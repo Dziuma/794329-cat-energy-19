@@ -1,24 +1,27 @@
 .page-header {
-  width: 280px;
-  padding: 11px 0;
+  width: 320px;
+  padding: 11px 0 0 0;
   margin: 0 auto;
-
-  position: relative;
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
-    display: flex;
-    justify-content: space-between;
     width: 708px;
-    padding: 24px 0;
+    padding: 24px 0 0 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    width: 1220px;
+    width: auto;
+    margin: 0 0 50px 0;
     padding-top: 53px;
-    padding-bottom: 670px;
+  }
+
+  .index .page-header {
+    background: linear-gradient(to right, #ffffff 50%, #68b738 50%);
+    background-image: url(../img/index-background-desktop@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
   }
 }
