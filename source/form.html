@@ -35,46 +35,83 @@
     <h1 class="program__title">Подбор программы</h1>
     <p class="program__lead">Заполните анкету и мы подберем программу питания для вашего кота</p>
     <form class="program__form form" action="https://echo.htmlacademy.ru" method="POST">
-      <fieldset class="form__info">
-        <label for="cat-name">Имя:*</label>
-        <input id="cat-name" type="text" name="name" placeholder="Барсик">
-        <label for="cat-weight">Вес (кг):*</label>
-        <input id="cat-weight" type="text" name="weight" placeholder="7">
-        <label for="cat-age">Возраст (лет):</label>
-        <input id="cat-age" type="text" name="age" placeholder="7">
-      </fieldset>
-      <fieldset class="form__programm">
-        <input id="lose" type="radio" name="program" value="lose" checked>
-        <label for="lose">Похудение</label>
-        <input id="gain" type="radio" name="program" value="gain">
-        <label for="gain">Набор массы</label>
-        <input id="advise" type="radio" name="program" value="advise">
-        <label for="advise">Не знаю (Нужен ваш совет)</label>
-      </fieldset>
+      <div class="form__row">
+        <fieldset class="form__info">
+          <p class="form__info-item">
+            <label for="cat-name">Имя:*</label>
+            <input id="cat-name" type="text" name="name" placeholder="Барсик">
+          </p>
+          <p class="form__info-item">
+            <label for="cat-weight">Вес (кг):*</label>
+            <input id="cat-weight" type="text" name="weight" placeholder="7">
+          </p>
+          <p class="form__info-item">
+            <label for="cat-age">Возраст (лет):</label>
+            <input id="cat-age" type="text" name="age" placeholder="7">
+          </p>
+        </fieldset>
+
+        <fieldset class="form__program">
+          <p class="form__program-item">
+            <input id="lose" type="radio" name="program" value="lose" checked>
+            <label for="lose">Похудение</label>
+          </p>
+          <p class="form__program-item">
+            <input id="gain" type="radio" name="program" value="gain">
+            <label for="gain">Набор массы</label>
+          </p>
+          <p class="form__program-item">
+            <input id="advise" type="radio" name="program" value="advise">
+            <label for="advise">Не знаю (Нужен ваш совет)</label>
+          </p>
+        </fieldset>
+      </div>
+
       <fieldset class="form__contacts">
-        <legend>Контактные данные (владельца кота)</legend>
-        <label for="email">E-mail:*</label>
-        <input id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
-        <label for="tel">Телефон:*</label>
-        <input id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90">
+        <legend>Контактные данные<br>(владельца&nbsp;кота)</legend>
+        <div class="form__contacts-wrapper">
+          <p class="form__contacts-item">
+            <label for="email">E-mail:*</label>
+            <input id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
+          </p>
+          <p class="form__contacts-item">
+            <label for="tel">Телефон:*</label>
+            <input id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90">
+          </p>
+        </div>
       </fieldset>
-      <fieldset>
+
+      <fieldset class="form__comment">
         <legend>Комментарий</legend>
         <textarea name="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
-      <fieldset class="form__programm">
+
+      <fieldset class="form__extra">
         <legend>Дополнительно</legend>
-        <input id="sweetener" type="checkbox" name="sweetener" value="sweetener" checked>
-        <label for="sweetener">Сахарозаменитель</label>
-        <input id="water" type="checkbox" name="water" value="water">
-        <label for="water">Питьевая вода</label>
-        <input id="milk" type="checkbox" name="milk" value="milk">
-        <label for="milk">Молоко</label>
-        <input id="vitamin" type="checkbox" name="vitamin" value="vitamin">
-        <label for="vitamin">Витамины</label>
+        <div class="form__extra-wrapper">
+          <p class="form__extra-item">
+            <input id="sweetener" type="checkbox" name="sweetener" value="sweetener" checked>
+            <label for="sweetener">Сахарозаменитель</label>
+          </p>
+          <p class="form__extra-item">
+            <input id="water" type="checkbox" name="water" value="water">
+            <label for="water">Питьевая вода</label>
+          </p>
+          <p class="form__extra-item">
+            <input id="milk" type="checkbox" name="milk" value="milk">
+            <label for="milk">Молоко</label>
+          </p>
+          <p class="form__extra-item">
+            <input id="vitamin" type="checkbox" name="vitamin" value="vitamin">
+            <label for="vitamin">Витамины</label>
+          </p>
+        </div>
       </fieldset>
-      <button class="form__submit-btn button" type="submit">Отправить заявку</button>
-      <p class="form__required"><sup>*</sup> — Обязательные поля</p>
+
+      <div class="form__submit">
+        <button class="form__submit-btn button" type="submit">Отправить заявку</button>
+        <p class="form__required"><sup>*</sup> — Обязательные поля</p>
+      </div>
     </form>
   </main>
 
