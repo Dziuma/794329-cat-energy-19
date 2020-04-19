@@ -1,11 +1,17 @@
 .intro {
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-
   font-family: $Oswald;
   text-align: center;
   color: #ffffff;
+}
+
+.intro__wrapper {
+  width: 320px;
+  padding: 29px 20px 22px;
+  margin: 0 auto;
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-size: 320px auto;
+  background-repeat: no-repeat;
 }
 
 .intro__title {
@@ -23,5 +29,53 @@
 }
 .intro__link {
 }
-.button {
+
+@media (min-width: $tablet-width) {
+  .intro {
+    text-align: left;
+    color: #000000;
+  }
+
+  .intro__wrapper {
+    position: relative;
+
+    width: 708px;
+    padding: 29px 35px 0 90px;
+    padding-bottom: 250px;
+
+    background-image: none;
+  }
+
+  .intro__image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .button.intro__link {
+    width: 245px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    min-height: 555px;
+  }
+
+  .intro__wrapper {
+    width: 1220px;
+    padding: 150px 35px 0 90px;
+  }
+
+  .intro__title,
+  .intro__text {
+    width: 530px;
+  }
+
+  .intro__image {
+    left: 600px;
+    top: 150px;
+    z-index: 0;
+  }
 }

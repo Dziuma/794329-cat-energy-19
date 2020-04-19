@@ -1,3 +1,14 @@
+body {
+  min-width: 320px;
+
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -9,8 +20,14 @@ ul {
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 @import "var.scss";
 @import "fonts.scss";
+@import "page-header.scss";
+@import "hamburger.scss";
 @import "menu.scss";
 @import "intro.scss";
 @import "button.scss";

@@ -1,9 +1,12 @@
 .catalog {
+  width: 320px;
+  margin: 0 auto;
   padding: 0 0 30px;
 }
 
 .catalog__title {
   margin-bottom: 35px;
+  padding: 0 0 0 20px;
 
   font-family: $Oswald;
   font-size: 36px;
@@ -12,14 +15,17 @@
   text-align: left;
   color: #111111;
 }
+
 .catalog__list {
 }
-.catalog__item {
-}
+
 .catalog__show-all {
+  padding: 27px 20px 25px 20px;
 }
+
 .catalog__more {
 }
+
 .catalog__order-all {
   display: block;
   min-height: 289px;
@@ -34,4 +40,42 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    width: 708px;
+  }
+
+  .catalog__title {
+    padding: 0 0 0 0;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .catalog__list > li {
+    margin: 0 0 50px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    width: 1220px;
+  }
+
+  .catalog__list {
+    justify-content: flex-start;
+  }
+
+  .catalog__list > li {
+    margin: 0 80px 142px 0;
+  }
+
+  .catalog__list > li:nth-of-type(4n) {
+    margin: 0 0 142px 0;
+  }
 }

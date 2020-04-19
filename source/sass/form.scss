@@ -1,4 +1,11 @@
 .form {
+  fieldset {
+    position: relative;
+    margin: 0 0 20px 0;
+    padding: 0;
+    border: none;
+  }
+
   label {
     font-family: $Oswald;
     font-size: 16px;
@@ -18,14 +25,23 @@
   }
 
   legend {
+    position: absolute;
+    left: 0;
+    top: -15px;
+    padding: 0 25px 0 0;
+
     font-family: $Oswald;
     font-size: 24px;
     line-height: 1;
     text-align: left;
     color: #111111;
+
+    background-color: #ffffff;
   }
 
   textarea {
+    width: 100%;
+
     font-family: $Oswald;
     font-size: 16px;
     line-height: 1.13;
@@ -34,18 +50,128 @@
     color: #444444;
   }
 }
-.form__info {
+
+.form__row {
 }
-.form__programm {
+
+.form .form__info {
+  border-bottom: 1px solid #ededed;
 }
-.form__contacts {
+
+.form__info-item,
+.form__contacts-item {
+  display: flex;
+}
+
+.form__info-item input,
+.form__contacts-item input {
+  flex-grow: 1;
+}
+
+.form .form__program {
+  border-bottom: 1px solid #ededed;
+}
+
+.form .form__contacts {
+  padding: 40px 0 0 0;
+  border-top: 3px solid #68b738;
+}
+
+.form .form__comment {
+  padding: 40px 0 0 0;
+  border-top: 3px solid #68b738;
+}
+
+.form .form__extra {
+  padding: 40px 0 0 0;
+  border-top: 3px solid #68b738;
+}
+
+.form__submit {
 }
 .form__submit-btn {
 }
+
 .form__required {
   font-family: $Arial;
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
   color: #444444;
+}
+
+@media (min-width: $tablet-width) {
+  .form .form__info,
+  .form .form__program,
+  .form .form__contacts,
+  .form .form__comment,
+  .form .form__extra,
+  .form .form__submit {
+    padding: 40px 70px 0 70px;
+  }
+
+  .form legend {
+    left: 35px;
+    padding: 0 45px 0 45px;
+  }
+
+  .form__contacts br {
+    display: none;
+  }
+
+  .form__extra-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__extra-item {
+    width: 50%;
+  }
+
+  .form__submit {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__row,
+  .form .form__contacts,
+  .form .form__comment,
+  .form .form__extra,
+  .form .form__submit {
+    padding: 40px 110px 0 110px;
+  }
+
+  .form .form__info,
+  .form .form__program {
+    padding: 0 0 40px 0;
+  }
+
+  .form__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__info,
+  .form__program {
+    width: 570px;
+  }
+
+  .form legend {
+    left: 65px;
+    padding: 0 45px 0 45px;
+  }
+
+  .form__contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__contacts-item {
+    width: 570px;
+  }
+
+  .form__extra-item {
+    width: 25%;
+  }
 }

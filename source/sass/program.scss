@@ -1,4 +1,6 @@
 .program {
+  width: 320px;
+  margin: 0 auto;
 }
 
 .program__title {
@@ -20,4 +22,32 @@
 }
 
 .program__form {
+}
+
+@media (min-width: $tablet-width) {
+  .program {
+    width: $tablet-width;
+  }
+
+  .program__title {
+    padding: 0 70px 0 30px;
+  }
+
+  .program__lead {
+    padding: 0 70px 0 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program {
+    width: $desktop-width;
+  }
+
+  .program__title {
+    padding: 0 110px 0 110px;
+  }
+
+  .program__lead {
+    padding: 0 110px 0 110px;
+  }
 }

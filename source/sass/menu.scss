@@ -16,3 +16,22 @@
 }
 .menu__link {
 }
+
+@media (min-width: $tablet-width) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu {
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
