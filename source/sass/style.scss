@@ -1,5 +1,6 @@
 body {
   min-width: 320px;
+  border: 1px solid #cccccc;
 
   background-color: #ffffff;
 }
@@ -22,6 +23,24 @@ ul {
 
 * {
   box-sizing: border-box;
+}
+
+.wrapper {
+  width: 320px;
+  margin: 0 auto;
+  outline: 1px solid #cccccc;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 1440px;
+  }
 }
 
 @import "var.scss";

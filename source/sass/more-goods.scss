@@ -1,6 +1,10 @@
 .more-goods {
+  margin: 0 0 35px 0;
 }
+
 .more-goods__title {
+  padding: 0 20px 0 20px;
+
   font-family: $Oswald;
   font-size: 24px;
   font-weight: normal;
@@ -10,14 +14,22 @@
 }
 
 .more-goods__list {
+  padding: 0 20px 0 20px;
 }
+
 .more-goods__item {
+  padding: 14px 0 0 0;
+  border-bottom: 1px solid #cccccc;
 }
+
 .more-goods__table {
+  width: 100%;
   border-collapse: collapse;
 }
 
 .more-goods__caption {
+  margin: 0 0 15px 0;
+
   font-family: $Oswald;
   font-size: 16px;
   line-height: 1;
@@ -43,4 +55,70 @@
 }
 
 .more-goods__order {
+  margin: 14px 0 17px 0;
+}
+
+.more-goods__all {
+  display: block;
+  min-height: 289px;
+
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: #ffffff;
+
+  background-image: url(../img/gift-photo-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media (min-width: $tablet-width) {
+  .more-goods__order {
+    width: 100%;
+  }
+
+  .more-goods__list {
+    margin: 0 0 70px 0;
+  }
+
+  .more-goods__all {
+    width: 100%;
+
+    background-repeat: repeat;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-goods__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .more-goods__list {
+    width: 895px;
+    padding: 0;
+  }
+
+  .more-goods__item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .more-goods__table {
+    display: flex;
+  }
+
+  .more-goods__caption {
+    width: 325px;
+  }
+
+  .more-goods__feature {
+    width: 245px;
+  }
+
+  .more-goods__order {
+    width: 245px;
+  }
 }

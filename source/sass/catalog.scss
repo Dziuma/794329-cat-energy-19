@@ -1,7 +1,6 @@
 .catalog {
   width: 320px;
   margin: 0 auto;
-  padding: 0 0 30px;
 }
 
 .catalog__title {
@@ -24,22 +23,6 @@
 }
 
 .catalog__more {
-}
-
-.catalog__order-all {
-  display: block;
-  min-height: 289px;
-
-  font-family: Arial;
-  font-size: 16px;
-  line-height: 1.25;
-  text-align: center;
-  color: #ffffff;
-
-  background-image: url(../img/gift-photo-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 @media (min-width: $tablet-width) {
