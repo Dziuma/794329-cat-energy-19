@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   min-width: 320px;
   border: 1px solid #cccccc;
@@ -21,10 +25,6 @@ ul {
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .wrapper {
   width: 320px;
   margin: 0 auto;
@@ -45,8 +45,8 @@ ul {
 
 @import "var.scss";
 @import "fonts.scss";
+@import "visually-hidden.scss";
 @import "page-header.scss";
-@import "hamburger.scss";
 @import "menu.scss";
 @import "intro.scss";
 @import "button.scss";
