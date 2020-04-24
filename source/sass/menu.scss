@@ -51,17 +51,26 @@
 }
 
 .menu__list {
-  display: none;
+  display: block;
 }
 
 .menu__item {
-  padding: 24px 0;
   border-top: 1px solid #e6e6e6;
+}
+
+.menu__link {
+  display: block;
+  padding: 24px 0;
 
   text-align: center;
 }
 
-.menu__link {
+.menu__item:not(.menu__item--active) .menu__link:hover {
+  opacity: 0.6;
+}
+
+.menu__item:not(.menu__item--active) .menu__link:active {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
@@ -112,13 +121,19 @@
 
     background-color: #68b738;
   }
+
+  .menu__link {
+    padding: 0 0 0 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .menu {
     width: 1220px;
     margin: 0 auto;
+  }
 
+  #index .menu {
     color: #ffffff;
   }
 
@@ -129,7 +144,7 @@
     line-height: 1.25;
   }
 
-  .menu__item--active::before {
+  #index .menu__item--active::before {
     background-color: #ffffff;
   }
 }
