@@ -1,7 +1,7 @@
 .contacts {
   display: flex;
   justify-content: space-between;
-  padding: 20px 25px 20px 20px;
+  padding: 27px 22px 28px 19px;
 }
 
 .contacts--bg-wite {
@@ -35,12 +35,24 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    padding: 60px 70px;
+    padding: 66px 70px;
   }
 
-  .contacts__text,
-  .contacts__address {
+  .contacts__text {
     width: 154px;
+
+    font-size: 20px;
+  }
+
+  .contacts__address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 164px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: right;
   }
 }
 
