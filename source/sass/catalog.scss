@@ -4,7 +4,7 @@
 }
 
 .catalog__title {
-  margin-bottom: 35px;
+  margin: 14px 0 28px 0;
   padding: 0 0 0 20px;
 
   font-family: $Oswald;
@@ -16,13 +16,11 @@
 }
 
 .catalog__list {
+  border-top: 1px solid #ededed;
 }
 
 .catalog__show-all {
   padding: 27px 20px 25px 20px;
-}
-
-.catalog__more {
 }
 
 @media (min-width: $tablet-width) {
@@ -31,23 +29,32 @@
   }
 
   .catalog__title {
+    margin: 55px 0 165px 0;
     padding: 0 0 0 0;
+
+    font-size: 60px;
+    line-height: 1;
   }
 
   .catalog__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    border-top: none;
   }
 
   .catalog__list > li {
-    margin: 0 0 50px 0;
+    margin: 0 0 139px 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .catalog {
     width: 1220px;
+  }
+
+  .catalog__title {
+    margin: -3px 0 165px;
   }
 
   .catalog__list {
