@@ -1,31 +1,129 @@
 .menu {
+  position: relative;
+
+  border-bottom: 1px solid #e6e6e6;
+
   font-family: Oswald, "Arial Narrow", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
-  text-align: center;
   color: #111111;
   text-transform: uppercase;
 }
 
+.menu__logo {
+  display: inline-block;
+  margin: 0 20px 15px 20px;
+}
+
+.menu__toggle {
+  position: absolute;
+  top: 12px;
+  right: 19px;
+  z-index: 2;
+
+  display: block;
+  width: 25px;
+  height: 19px;
+  border: none;
+
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.menu--closed .menu__toggle::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: #222222;
+  box-shadow: 0 7px 0 0 #222222, 0 14px 0 0 #222222;
+}
+
+.menu--closed .menu__toggle:active::before {
+  background-color: rgba(34, 34, 34, 0.3);
+  box-shadow: 0 7px 0 0 rgba(34, 34, 34, 0.3), 0 14px 0 0 rgba(34, 34, 34, 0.3);
+}
+
 .menu__list {
+  display: none;
 }
+
 .menu__item {
+  border-top: 1px solid #e6e6e6;
 }
-.menu__item--active {
-}
+
 .menu__link {
+  display: block;
+  padding: 24px 0;
+
+  text-align: center;
+}
+
+.menu__item:not(.menu__item--active) .menu__link:hover {
+  opacity: 0.6;
+}
+
+.menu__item:not(.menu__item--active) .menu__link:active {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
   .menu {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+  }
+
+  .menu__logo {
+    height: 59px; // Временно для сетки
+    margin: 0 20px 0 0;
+  }
+
+  .menu__toggle {
+    display: none;
   }
 
   .menu__list {
     display: flex;
     justify-content: space-between;
+    width: 439px;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.39;
+  }
+
+  .menu__item {
+    padding: 0;
+    border-top: none;
+  }
+
+  .menu__item--active {
+    position: relative;
+  }
+
+  .menu__item--active::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+
+    height: 2px;
+
+    background-color: #68b738;
+  }
+
+  .menu__link {
+    padding: 0 0 0 0;
   }
 }
 
@@ -33,5 +131,20 @@
   .menu {
     width: 1220px;
     margin: 0 auto;
+  }
+
+  #index .menu {
+    color: #ffffff;
+  }
+
+  .menu__list {
+    width: 477px;
+
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  #index .menu__item--active::before {
+    background-color: #ffffff;
   }
 }

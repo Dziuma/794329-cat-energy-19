@@ -1,10 +1,12 @@
 .about {
   width: 320px;
-  margin: 0 auto;
-  padding: 20px 20px 20px 20px;
+  margin: 0 auto 25px auto;
+  padding: 0 20px 20px 20px;
 }
 
 .about__title {
+  margin: 0 0 28px 0;
+
   font-family: $Oswald;
   font-size: 36px;
   font-weight: normal;
@@ -12,10 +14,15 @@
   text-align: left;
   color: #111111;
 }
+
 .about__list {
 }
+
 .about__item {
-  margin-bottom: 20px;
+  position: relative;
+
+  padding: 1px 0 0 80px;
+  margin: 0 0 25px 0;
 
   font-family: $Arial;
   font-size: 14px;
@@ -24,43 +31,120 @@
   color: #444444;
 }
 
+.about__item::before {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 60px;
+  height: 60px;
+
+  background-color: $leaf;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .about__item:last-of-type {
   margin-bottom: 0;
 }
-.about__item--1 {
+
+.about__item--1::before {
+  background-image: url('../img/advantage-leaf@1x.png')
 }
-.about__item--2 {
+
+.about__item--2::before {
+  background-image: url('../img/advantage-powder@1x.png')
 }
-.about__item--3 {
+
+.about__item--3::before {
+  background-image: url('../img/advantage-dining@1x.png')
 }
-.about__item--4 {
+
+.about__item--4::before {
+  background-image: url('../img/advantage-clock@1x.png')
 }
 
 @media (min-width: $tablet-width) {
   .about {
     width: 768px;
-    padding: 30px;
+    padding: 0 30px 0 30px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   .about__list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 0 0 0;
+  }
+
+  .about__title {
+    margin: 0 0 42px 0;
+
+    font-size: 60px;
+    line-height: 1;
   }
 
   .about__item {
-    width: 200px;
-    margin-bottom: 87px;
+    width: 245px;
+    padding: 113px 0 45px 0;
+    margin: 29px 0 58px 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .about__item::before {
+    width: 80px;
+    height: 80px;
   }
 
   .about__item:nth-of-type(odd) {
-    margin-right: 150px;
+    margin-right: 137px;
   }
+
+  .about__item:last-of-type {
+    margin-bottom: auto;
+  }
+
+  .about__item::after {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    z-index: -1;
+
+    font-family: $Oswald;
+    font-size: 281px;
+    line-height: 1;
+    color: #f2f2f2;
+  }
+
+  .about__item--1::after {
+    content: '1';
+
+    right: 15px;
+  }
+
+  .about__item--2::after {
+    content: '2';
+  }
+
+  .about__item--3::after {
+    content: '3';
+  }
+
+  .about__item--4::after {
+    content: '4';
+  }
+
 }
 
 @media (min-width: $desktop-width) {
   .about {
     width: 1220px;
-    padding: 30px 0;
+    padding: 28px 0;
+    border-bottom: 0;
   }
 
   .about__list {
@@ -68,11 +152,11 @@
   }
 
   .about__item {
-    width: 235px;
+    width: 246px;
   }
 
   .about__item:nth-of-type(odd) {
-    margin-right: 89px;
+    margin-right: 0;
   }
 
   .about__item:last-of-type {

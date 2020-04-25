@@ -1,11 +1,51 @@
 .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0 18px 0;
 }
+
+.copyright__link {
+  display: block;
+}
+
 .copyright__text {
   font-family: $Arial;
   font-size: 16px;
   line-height: 1;
   text-align: left;
   color: #444444;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
+
 .copyright__icon {
+  display: block;
+  width: 30px;
+  height: 40px;
+
+  background-image: url('../img/htmlacademy.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 41px 41px;
+
+  &:hover {
+    background-image: url('../img/htmlacademy-hover.svg');
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding: 0 0 0 0;
+  }
+
+  .copyright__link {
+    margin: 0 0 0 23px;
+  }
 }

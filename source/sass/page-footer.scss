@@ -15,19 +15,27 @@
 }
 
 .page-footer__wrapper {
+  min-height: 236px; // Временно для сетки
   padding: 20px;
 
   text-align: center;
 }
 
 .page-footer__logo-link {
+  display: inline-block;
+  margin: 13px 0 29px 0;
 }
 
 .page-footer__logo-image {
 }
+
 .page-footer__socials {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 }
+
 .page-footer__copyright {
+  margin: 0 0 0 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -42,7 +50,30 @@
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    align-items: center;
+    min-height: auto; // Временно для сетки
+    padding: 55px 30px;
+  }
+
+  .page-footer__logo-link {
+    margin: 0 0 0 0;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  .page-footer .page-footer__socials {
+    padding: 0 10px 6px 63px;
+    border: none;
+  }
+
+  .page-footer__copyright {
+    margin: 0 0 0 0;
   }
 }
 

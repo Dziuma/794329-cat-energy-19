@@ -1,7 +1,8 @@
 .goods {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 20px 25px 20px;
+  padding: 0 20px 24px 20px;
+  border-bottom: 1px solid #ededed;
 }
 
 .goods__image-link {
@@ -14,13 +15,17 @@
 
 .goods__table {
   width: 140px;
+  border-collapse: collapse;
 }
 
 .goods__title {
+  padding: 20px 65px 14px 0;
+
   font-family: $Oswald;
   font-size: 16px;
   line-height: 1.25;
   text-align: left;
+  text-transform: uppercase;
   color: #111111;
 }
 
@@ -40,17 +45,32 @@
   color: #444444;
 }
 
-.goods__order.button {
+.goods__order {
   width: 100%;
+  padding: 10px 0;
+
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 @media (min-width: $tablet-width) {
   .goods {
+    position: relative;
+
     flex-direction: column;
     width: 324px;
-    padding: 0 38px 40px 38px;
+    padding: 143px 38px 40px 38px;
 
     background-color: #f2f2f2;
+  }
+
+  .goods__title {
+    padding: 20px 55px 22px;
+
+    font-size: 20px;
+    line-height: 1;
+
+    text-align: center;
   }
 
   .goods--show-all {
@@ -60,20 +80,33 @@
   }
 
   .goods__image-link {
+    position: absolute;
+    bottom: 300px;
+
     align-self: center;
   }
 
   .goods__table {
     width: 100%;
+    margin-bottom: 33px;
   }
 
-  .goods__title {
-    text-align: center;
+  .goods__feature,
+  .goods__value {
+    padding: 7px 0;
+    border-bottom: 1px solid #cdcdcd;
+
+    font-size: 16px;
+    line-height: 1;
   }
 }
 
 @media (min-width: $desktop-width) {
   .goods {
     width: 245px;
+  }
+
+  .goods__title {
+    padding: 20px 15px 22px;
   }
 }
