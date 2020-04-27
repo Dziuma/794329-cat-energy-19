@@ -1,10 +1,14 @@
 .example {
   width: 320px;
-  min-height: 707px; // Временно для сетки
   margin: 0 auto;
-  padding: 30px 20px 30px 20px;
+  padding: 19px 0 30px 0;
 
   background-color: #f2f2f2;
+}
+
+.example__col:first-of-type {
+  padding: 0 20px;
+  margin: 0 0 38px;
 }
 
 .example__title {
@@ -19,7 +23,8 @@
 }
 
 .example__text {
-  margin-bottom: 23px;
+  margin: 0 0 25px 0;
+  padding: 0 5px 0 0;
 
   font-family: $Arial;
   font-size: 14px;
@@ -35,9 +40,7 @@
 }
 
 .example__stats-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
 
   text-align: center;
 
@@ -47,14 +50,17 @@
     font-weight: normal;
     line-height: 1;
     color: #111111;
+    text-transform: uppercase;
   }
 
   span {
-    position: relative;
-    top: 15px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
 
     width: 87px;
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
 
     font-family: Arial;
     font-size: 12px;
@@ -70,21 +76,32 @@
   border: 1px solid #cdcdcd;
   border-radius: 3px;
 
-  padding: 15px 0 0 0;
+  padding: 13px 0 15px 0;
+  margin: 0 0 33px 0;
 }
 
 .example__stats-item--cost {
   width: 100%;
+  margin: 0 0 0 0;
 
   font-family: $Oswald;
   font-size: 14px;
   line-height: 1.43;
   text-transform: uppercase;
   color: #111111;
+
+  i {
+    font-style: normal;
+  }
 }
 
 .example__image {
-  margin: 0 0 30px 0;
+  display: none;
+}
+
+.example__image--active {
+  display: block;
+  margin: 0 0 34px 4px;
 }
 
 .example__toggles {
@@ -103,28 +120,39 @@
   text-align: left;
   text-transform: uppercase;
   color: #111111;
+
+  background-color: transparent;
 }
 
 .example__toggles-outer {
+  display: flex;
+  align-items: center;
   width: 84px;
   height: 14px;
+  padding: 4px 6px;
+  margin: 0 14px 0 9px;
   border: 1px solid #cdcdcd;
   border-radius: 6px;
-  margin: 0 9px 0 9px;
 
   background-color: #ffffff;
 }
 
 .example__toggles-inner {
+  display: inline-block;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+
+  background-color: $leaf;
+  vertical-align: middle;
 }
 
 @media (min-width: $tablet-width) {
   .example {
     width: $tablet-width;
-    padding: 50px 0 0 0;
-    min-height: 1053px; // Временно для сетки
+    padding: 17px 0 0 0;
 
-    background-color: pink; // Должно быть #ffffff
+    background-color: transparent;
   }
 
   .example__row {
@@ -133,45 +161,89 @@
   }
 
   .example__col:first-of-type {
-    padding: 0 30px;
-    margin: 0 0 60px 0;
+    padding: 0 30px 0 30px;
+    margin: 0 0 216px 0;
+  }
+
+  .example__title {
+    margin: 0 0 65px 0;
+
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .example__text {
+    padding: 0;
+    margin: 0 6px 52px 0;
+
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   .example__stats {
     justify-content: start;
   }
 
-  .example__stats-item.example__stats-item:not(:last-of-type) {
+  .example__stats-item:not(:last-of-type) {
     width: 162px;
+    padding: 20px 0 18px 0;
     margin: 0 42px 40px 0;
   }
 
   .example__stats-item--cost {
     width: 174px;
-    margin: 0 0 40px auto;
+    margin: 9px 0 40px auto;
 
+    font-size: 20px;
     text-align: right;
   }
 
+  .example__stats-item {
+    b {
+      font-size: 30px;
+    }
+
+    span {
+      bottom: -7px;
+
+      width: auto;
+
+      font-size: 14px;
+      white-space: nowrap;
+
+      background-color: #ffffff;
+    }
+  }
+
   .example__col:last-of-type {
+    min-height: 462px;
     padding: 0 0 40px 0;
 
     text-align: center;
-    background-color: #cdcdcd;
+    background-color: #f2f2f2;
   }
 
   .example__image {
     margin: -50px 0 30px 0;
+  }
+
+  .example__toggles-before,
+  .example__toggles-after {
+    padding: 3px 0;
+    border-bottom: 1px dotted #bebebe;
+
+
+    font-size: 20px;
+    line-height: 1.25;
   }
 }
 
 @media (min-width: $desktop-width) {
   .example {
     width: $desktop-width;
-    min-height: 566px; // Временно для сетки
     padding: 0 0 0 0;
 
-    background-color: #eaeaea;
+    background-image: linear-gradient(#ffffff 160px, #f2f2f2 160px);
   }
 
   .example__row {
@@ -184,17 +256,37 @@
     width: 610px;
   }
 
-  .example__col:last-of-type {
-    background-color: #eaeaea;
+  .example__col:first-of-type {
+    padding: 0 175px 0 0 ;
+    margin: 0 0 30px 0;
   }
 
-  .example__col:first-of-type {
-    padding: 0 190px 0 0 ;
-    margin: -70px 0 0 0;
+  .example__col:last-of-type {
+    background-color: transparent;
+  }
+
+  .example__title {
+    margin: 23px 0 147px 0;
+  }
+
+  .example__text {
+    margin: 0 0 67px 0;
+  }
+
+  .example__stats-item.example__stats-item:not(:last-of-type) {
+    margin: 0 42px 56px 0;
+  }
+
+  .example__stats-item {
+    span {
+      background-color: #f2f2f2;
+    }
   }
 
   .example__stats-item--cost {
-    width: 174px;
+    display: flex;
+    justify-content: space-between;
+    width: 327px;
     margin: 0 0 40px 0;
 
     text-align: left;
