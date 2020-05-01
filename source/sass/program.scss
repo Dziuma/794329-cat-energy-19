@@ -4,6 +4,9 @@
 }
 
 .program__title {
+  padding: 0 20px;
+  margin: 14px 0 26px 0;
+
   font-family: $Oswald;
   font-size: 36px;
   font-weight: normal;
@@ -13,6 +16,9 @@
 }
 
 .program__lead {
+  padding: 0 30px 0 20px;
+  margin: 0 0 37px 0;
+
   font-family: $Oswald;
   font-size: 14px;
   line-height: 1.29;
@@ -21,20 +27,24 @@
   color: #111111;
 }
 
-.program__form {
-}
-
 @media (min-width: $tablet-width) {
   .program {
     width: $tablet-width;
   }
 
   .program__title {
-    padding: 0 70px 0 30px;
+    padding: 0 70px 0 29px;
+    margin: 56px 0 56px 0;
+
+    font-size: 60px;
+    line-height: 1;
   }
 
   .program__lead {
-    padding: 0 70px 0 70px;
+    padding: 0 370px 0 70px;
+
+    font-size: 20px;
+    line-height: 1.5;
   }
 }
 
@@ -45,9 +55,11 @@
 
   .program__title {
     padding: 0 110px 0 110px;
+    margin: 56px 0 54px;
   }
 
   .program__lead {
-    padding: 0 110px 0 110px;
+    padding: 0 1000px 0 110px;
+    margin: 0 0 26px;
   }
 }

@@ -1,0 +1,68 @@
+.check {
+  position: relative;
+
+  display: inline-block;
+  padding: 13px 0 12px 45px;
+
+  &:hover .check__box {
+    border-color: #bcbcbc;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.check__input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check__box {
+  position: absolute;
+  left: 0;
+  top: 7px;
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cecece;
+
+  background-color: #ffffff;
+}
+
+/****** Checked ******/
+
+.check__input:checked + .check__box {
+  background: #ffffff url(../img/icon-tick.svg) no-repeat center/21px 16px;
+}
+
+/****** Focused ******/
+
+.check__input:focus + .check__box {
+  box-shadow: 0 0 5px 2px $leaf;
+}
+
+.check__input:checked:focus + .check__box {
+  background: #ffffff url(../img/icon-tick.svg) no-repeat center/21px 16px;
+  box-shadow: 0 0 5px 2px $leaf;
+}
+
+@media (min-width: $tablet-width) {
+  .check__box {
+    top: 4px;
+
+    width: 40px;
+    height: 40px;
+  }
+}
