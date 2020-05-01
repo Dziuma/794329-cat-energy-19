@@ -1,9 +1,17 @@
 .more-goods {
+  position: relative;
+
+  border-top: 3px solid $leaf;
   margin: 0 0 35px 0;
 }
 
 .more-goods__title {
+  position: absolute;
+  top: -16px;
+  left: 0;
+
   padding: 0 20px 0 20px;
+  margin: 0;
 
   font-family: $Oswald;
   font-size: 24px;
@@ -11,15 +19,22 @@
   line-height: 1;
   text-align: left;
   color: #111111;
+
+  background-color: #ffffff;
 }
 
 .more-goods__list {
-  padding: 0 20px 0 20px;
+  padding: 20px 20px 0 20px;
+  margin: 20px 0 40px;
 }
 
 .more-goods__item {
   padding: 14px 0 0 0;
   border-bottom: 1px solid #cccccc;
+}
+
+.more-goods__item:first-of-type {
+  border-top: 1px solid #cccccc;
 }
 
 .more-goods__table {
@@ -28,7 +43,7 @@
 }
 
 .more-goods__caption {
-  margin: 0 0 15px 0;
+  margin: 0 0 11px 0;
 
   font-family: $Oswald;
   font-size: 16px;
@@ -38,19 +53,12 @@
   color: #222222;
 }
 
-.more-goods__feature {
-  font-family: $Arial;
-  font-size: 14px;
-  line-height: 1;
-  text-align: left;
-  color: #444444;
-}
-
+.more-goods__feature,
 .more-goods__value {
   font-family: $Arial;
   font-size: 14px;
   line-height: 1;
-  text-align: right;
+  text-align: left;
   color: #444444;
 }
 
@@ -61,6 +69,7 @@
 .more-goods__all {
   display: block;
   min-height: 289px;
+  padding: 187px 70px 40px;
 
   font-family: Arial;
   font-size: 16px;
@@ -68,57 +77,144 @@
   text-align: center;
   color: #ffffff;
 
-  background-image: url(../img/gift-photo-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background-image: url(../img/icon-gift.svg), url(../img/gift-photo-mobile@1x.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 64px, center;
+  background-size: 56px 61px, contain;
 }
 
 @media (min-width: $tablet-width) {
-  .more-goods__order {
-    width: 100%;
+  .more-goods {
+    margin: -92px -30px 76px;
+  }
+
+  .more-goods__title {
+    top: -25px;
+    left: 27px;
+
+    padding: 0 38px;
+
+    font-size: 36px;
   }
 
   .more-goods__list {
-    margin: 0 0 70px 0;
+    padding: 90px 30px 30px;
+    margin: 0 0 40px 0;
+  }
+
+  .more-goods__item {
+    padding: 28px 37px 27px;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+  }
+
+  .more-goods__table {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .more-goods__caption {
+    margin: 0;
+
+    font-size: 20px;
+  }
+
+  .more-goods__feature,
+  .more-goods__value {
+    font-size: 16px;
+  }
+
+  .more-goods__value {
+    padding-left: 52px;
+  }
+
+  .more-goods__order {
+    width: 100%;
+    margin: 23px 0 0;
   }
 
   .more-goods__all {
-    width: 100%;
+    width: 708px;
+    min-height: 200px;
+    padding: 72px 120px 47px 424px;
+    margin: 0 auto;
 
-    background-repeat: repeat;
+    text-align: left;
+
+    background-image: url(../img/icon-gift.svg), url(../img/gift-photo-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: 91px 65px, center left;
+    background-size: 56px 61px, cover;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .more-goods {
+    margin: -87px -110px 58px;
+  }
+
+  .more-goods__title {
+    left: 70px;
+  }
+
   .more-goods__wrapper {
     display: flex;
     justify-content: space-between;
+    padding: 90px 110px 30px;
   }
 
   .more-goods__list {
     width: 895px;
     padding: 0;
+    margin: 0;
   }
 
   .more-goods__item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0 16px;
   }
 
   .more-goods__table {
-    display: flex;
+    width: 610px;
+    justify-content: initial;
+  }
+
+  .more-goods__table tbody {
+    flex-grow: 1;
   }
 
   .more-goods__caption {
     width: 325px;
   }
 
+  .more-goods__table tr {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .more-goods__feature {
-    width: 245px;
+    width: 215px;
+  }
+
+  .more-goods__value {
+    padding-left: 0;
   }
 
   .more-goods__order {
     width: 245px;
+    margin: 0;
+  }
+
+  .more-goods__all {
+    width: 245px;
+    padding: 190px 40px 38px;
+    margin: 0;
+
+    text-align: center;
   }
 }
