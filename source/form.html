@@ -54,22 +54,31 @@
 
           <fieldset class="form__program">
             <p class="form__program-item">
-              <input id="lose" type="radio" name="program" value="lose" checked>
-              <label for="lose">Похудение</label>
+              <label class="form__radio radio">
+                <input class="radio__input" type="radio" name="program" value="lose" checked>
+                <span class="radio__box"></span>
+                Похудение
+              </label>
             </p>
             <p class="form__program-item">
-              <input id="gain" type="radio" name="program" value="gain">
-              <label for="gain">Набор массы</label>
+              <label class="form__radio radio">
+                <input class="radio__input" type="radio" name="program" value="gain">
+                <span class="radio__box"></span>
+                Набор массы
+              </label>
             </p>
             <p class="form__program-item">
-              <input id="advise" type="radio" name="program" value="advise">
-              <label for="advise">Не знаю (Нужен ваш совет)</label>
+              <label class="form__radio radio">
+                <input class="radio__input" type="radio" name="program" value="advise">
+                <span class="radio__box"></span>
+                Не знаю (Нужен ваш совет)
+              </label>
             </p>
           </fieldset>
         </div>
 
         <fieldset class="form__contacts">
-          <legend>Контактные данные<br>(владельца&nbsp;кота)</legend>
+          <legend>Контактные данные<br> (владельца&nbsp;кота)</legend>
           <div class="form__contacts-wrapper">
             <p class="form__contacts-item">
               <label for="email">E-mail:*</label>
@@ -91,20 +100,32 @@
           <legend>Дополнительно</legend>
           <div class="form__extra-wrapper">
             <p class="form__extra-item">
-              <input id="sweetener" type="checkbox" name="sweetener" value="sweetener" checked>
-              <label for="sweetener">Сахарозаменитель</label>
+              <label class="form__check check">
+                <input class="check__input" type="checkbox" name="sweetener" value="sweetener" checked>
+                <span class="check__box"></span>
+                Сахарозаменитель
+              </label>
             </p>
             <p class="form__extra-item">
-              <input id="water" type="checkbox" name="water" value="water">
-              <label for="water">Питьевая вода</label>
+              <label class="form__check check">
+                <input class="check__input" type="checkbox" name="water" value="water">
+                <span class="check__box"></span>
+                Питьевая вода
+              </label>
             </p>
             <p class="form__extra-item">
-              <input id="milk" type="checkbox" name="milk" value="milk">
-              <label for="milk">Молоко</label>
+              <label class="form__check check">
+                <input class="check__input" type="checkbox" name="milk" value="milk">
+                <span class="check__box"></span>
+                Молоко
+              </label>
             </p>
             <p class="form__extra-item">
-              <input id="vitamin" type="checkbox" name="vitamin" value="vitamin">
-              <label for="vitamin">Витамины</label>
+              <label class="form__check check">
+                <input class="check__input" type="checkbox" name="vitamin" value="vitamin">
+                <span class="check__box"></span>
+                Витамины
+              </label>
             </p>
           </div>
         </fieldset>

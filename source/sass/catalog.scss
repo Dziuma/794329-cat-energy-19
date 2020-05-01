@@ -17,6 +17,7 @@
 
 .catalog__list {
   border-top: 1px solid #ededed;
+  margin-bottom: 42px;
 }
 
 .catalog__show-all {
@@ -51,6 +52,7 @@
 @media (min-width: $desktop-width) {
   .catalog {
     width: 1220px;
+    margin-top: 77px;
   }
 
   .catalog__title {

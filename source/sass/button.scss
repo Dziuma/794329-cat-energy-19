@@ -13,8 +13,24 @@
   background-color: #68b738;
   cursor: pointer;
 
+  &:hover {
+    background-color: $leaf-hover;
+  }
+
+  &:active {
+    color: #8fc46e;
+  }
+
   &--show-all {
     color: #444444;
     background-color: #f2f2f2;
+  }
+
+  &--show-all:hover {
+    background-color: #ebebeb;
+  }
+
+  &--show-all:active {
+    color: #b9b9b9;
   }
 }

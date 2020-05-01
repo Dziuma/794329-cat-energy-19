@@ -35,7 +35,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    padding: 66px 70px;
+    padding: 66px 73px 60px 70px;
   }
 
   .contacts__text {
@@ -49,6 +49,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 164px;
+    margin: -4px 0 -3px;
 
     font-size: 16px;
     line-height: 1.25;
