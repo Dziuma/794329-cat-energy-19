@@ -12,6 +12,10 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-size: 320px auto;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url(../img/index-background-mobile@2x.jpg);
+  }
 }
 
 .intro__title {
@@ -28,10 +32,6 @@
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
-}
-.intro__image {
-}
-.intro__link {
 }
 
 @media (min-width: $tablet-width) {
@@ -54,6 +54,9 @@
     left: 0;
     bottom: 0;
     z-index: -1;
+
+    width: 709px;
+    height: auto;
   }
 
   .intro__title {
@@ -93,8 +96,10 @@
   }
 
   .intro__image {
-    left: 600px;
-    top: 150px;
+    left: 450px;
+    top: 30px;
     z-index: 0;
+
+    width: 552px;
   }
 }
