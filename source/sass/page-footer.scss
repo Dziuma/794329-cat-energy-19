@@ -15,7 +15,6 @@
 }
 
 .page-footer__wrapper {
-  min-height: 236px; // Временно для сетки
   padding: 20px;
 
   text-align: center;
@@ -51,7 +50,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: auto; // Временно для сетки
     padding: 55px 30px;
   }
 

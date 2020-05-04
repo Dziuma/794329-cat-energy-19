@@ -82,8 +82,11 @@
   }
 
   .menu__logo {
-    height: 59px; // Временно для сетки
     margin: 0 20px 0 0;
+  }
+
+  .menu__logo-image {
+    width: 175px;
   }
 
   .menu__toggle {
@@ -131,6 +134,10 @@
   .menu {
     width: 1220px;
     margin: 0 auto;
+  }
+
+  .menu__logo-image {
+    width: 200px;
   }
 
   #index .menu {
