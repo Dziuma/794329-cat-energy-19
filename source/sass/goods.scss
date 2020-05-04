@@ -6,6 +6,7 @@
 }
 
 .goods__image-link {
+  display: block;
   width: 140px;
 }
 
@@ -81,10 +82,28 @@
 
   .goods__image-link {
     position: absolute;
-    bottom: 300px;
+    bottom: 303px;
+    left: 50%;
+    transform: translateX(-50%);
 
+    width: 324px;
     align-self: center;
   }
+
+  .goods__image {
+    width: 100%;
+    height: auto;
+  }
+
+  // .goods__image--small {
+  //   width: 324px;
+  //   height: 174px;
+  // }
+
+  // .goods__image--big {
+  //   width: 324px;
+  //   height: 208px;
+  // }
 
   .goods__table {
     width: 100%;
@@ -108,5 +127,9 @@
 
   .goods__title {
     padding: 20px 15px 22px;
+  }
+
+  .goods__image-link {
+    width: 245px;
   }
 }
