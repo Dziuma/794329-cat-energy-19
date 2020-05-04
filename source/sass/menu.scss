@@ -86,6 +86,10 @@
     margin: 0 20px 0 0;
   }
 
+  .menu__logo-image {
+    width: 175px;
+  }
+
   .menu__toggle {
     display: none;
   }
@@ -131,6 +135,10 @@
   .menu {
     width: 1220px;
     margin: 0 auto;
+  }
+
+  .menu__logo-image {
+    width: 200px;
   }
 
   #index .menu {
