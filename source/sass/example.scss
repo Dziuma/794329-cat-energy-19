@@ -224,7 +224,8 @@
   }
 
   .example__image {
-    margin: -50px 0 30px 0;
+    width: 690px;
+    margin: -168px auto 13px auto;
   }
 
   .example__toggles-before,
@@ -252,17 +253,20 @@
     margin: 0 auto;
   }
 
-  .example__col {
-    width: 610px;
-  }
-
   .example__col:first-of-type {
-    padding: 0 175px 0 0 ;
+    width: 510px;
+    padding: 0 75px 0 0 ;
     margin: 0 0 30px 0;
   }
 
   .example__col:last-of-type {
+    width: 710px;
+
     background-color: transparent;
+  }
+
+  .example__image {
+    margin: -28px 0 34px 30px;
   }
 
   .example__title {
@@ -290,5 +294,9 @@
     margin: 0 0 40px 0;
 
     text-align: left;
+  }
+
+  .example__toggles {
+    padding-left: 60px;
   }
 }
