@@ -44,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 55px 30px;
+    padding: 55px 25px 55px 30px;
   }
 
   .page-footer__logo-link {
@@ -60,7 +60,7 @@
   }
 
   .page-footer .page-footer__socials {
-    padding: 0 10px 6px 63px;
+    padding: 0 10px 6px 52px;
     border: none;
   }
 
@@ -87,5 +87,9 @@
     position: absolute;
     top: 95px;
     left: 110px;
+  }
+
+  .page-footer__copyright {
+    margin-right: -5px;
   }
 }

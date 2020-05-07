@@ -23,19 +23,17 @@
 
 .copyright__icon {
   display: block;
-  width: 30px;
+  width: 40px;
   height: 40px;
 
-  background-image: url('../img/htmlacademy.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 41px 41px;
+  color: #666666;
 
   &:hover {
-    background-image: url('../img/htmlacademy-hover.svg');
+    color: $leaf;
   }
 
   &:active {
+    color: $leaf;
     opacity: 0.3;
   }
 }
@@ -46,6 +44,6 @@
   }
 
   .copyright__link {
-    margin: 0 0 0 23px;
+    margin: 0 0 0 16px;
   }
 }
