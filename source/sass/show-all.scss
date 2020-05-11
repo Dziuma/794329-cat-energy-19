@@ -10,14 +10,14 @@
   width: 31px;
   height: 31px;
 
-  background: url('../img/icon-plus-mobile.svg') no-repeat 0 0/cover;
+  background: url("../img/icon-plus-mobile.svg") no-repeat 0 0/cover;
 }
 
 .show-all__lead {
   display: block;
   margin: 20px 0 10px 0;
 
-  font-family: $Oswald;
+  font-family: $oswald;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.25;
@@ -29,7 +29,7 @@
 .show-all__legend {
   margin: 0 0 19px 0;
 
-  font-family: $Arial;
+  font-family: $arial;
   font-size: 12px;
   line-height: 1.33;
   text-align: center;
@@ -54,7 +54,7 @@
     width: 61px;
     height: 61px;
 
-    background: url('../img/icon-plus.svg') no-repeat 0 0/cover;
+    background: url("../img/icon-plus.svg") no-repeat 0 0/cover;
   }
 
   .show-all__lead {

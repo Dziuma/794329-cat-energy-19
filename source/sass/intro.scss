@@ -1,5 +1,5 @@
 .intro {
-  font-family: $Oswald;
+  font-family: $oswald;
   text-align: center;
   color: #ffffff;
 }
@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url(../img/index-background-mobile@2x.jpg);
+    background-image: url("../img/index-background-mobile@2x.jpg");
   }
 }
 
