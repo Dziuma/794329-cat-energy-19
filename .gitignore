@@ -10,4 +10,5 @@ node_modules/
 npm-debug.*
 source/css/*.css
 source/css/*.map
+source/img/optimized/not_optimized
 Thumbs.db
