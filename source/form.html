@@ -12,6 +12,7 @@
     document.createElement("picture");
   </script>
   <script src="js/picturefill.js" async></script>
+  <script src="/path/to/svg4everybody.js"></script>
 </head>
 
 <body>
@@ -157,6 +158,8 @@
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.219806883654!2d30.321723!3d59.93861499999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRltGPLCAxOTExODY!5e0!3m2!1suk!2sua!4v1587378335303!5m2!1suk!2sua"
         width="320" height="362" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
+      <script>svg4everybody();</script>
+
       <div class="page-footer__wrapper">
         <a class="page-footer__logo-link" href="index.html">
           <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24"
@@ -166,7 +169,7 @@
           <li class="socials__item">
             <a class="socials__link" href="#">
               <span class="visually-hidden">Мы Вконтакте</span>
-              <svg class="socials__icon socials__icon--vk" width="24" height="16">
+              <svg class="socials__icon socials__icon--vk" width="24" height="16" focusable="false">
                 <use xlink:href="img/sprite.svg#vk-icon"></use>
               </svg>
             </a>
@@ -174,7 +177,7 @@
           <li class="socials__item">
             <a class="socials__link" href="#">
               <span class="visually-hidden">Мы в Инстаграм</span>
-              <svg class="socials__icon socials__icon--insta" width="18" height="18">
+              <svg class="socials__icon socials__icon--insta" width="18" height="18" focusable="false">
                 <use xlink:href="img/sprite.svg#insta-icon"></use>
               </svg>
             </a>
@@ -182,7 +185,7 @@
           <li class="socials__item">
             <a class="socials__link" href="#">
               <span class="visually-hidden">Мы в Фейсбук</span>
-              <svg class="socials__icon socials__icon--fb" width="11" height="23">
+              <svg class="socials__icon socials__icon--fb" width="11" height="23" focusable="false">
                 <use xlink:href="img/sprite.svg#fb-icon"></use>
               </svg>
             </a>
@@ -192,7 +195,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="copyright__text">HTML
               Academy</span></a>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="copyright__icon" width="40" height="40">
+            <svg class="copyright__icon" width="40" height="40" focusable="false">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>

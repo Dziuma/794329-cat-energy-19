@@ -9,6 +9,10 @@
   display: block;
 }
 
+.copyright__link:last-of-type {
+  margin-right: -5px;
+}
+
 .copyright__text {
   font-family: $Arial;
   font-size: 16px;
@@ -45,5 +49,9 @@
 
   .copyright__link {
     margin: 0 0 0 16px;
+  }
+
+  .copyright__link:last-of-type {
+    margin-right: auto;
   }
 }
