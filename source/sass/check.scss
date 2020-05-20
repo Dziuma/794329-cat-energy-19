@@ -44,7 +44,7 @@
 /****** Checked ******/
 
 .check__input:checked + .check__box {
-  background: #ffffff url(../img/icon-tick.svg) no-repeat center/21px 16px;
+  background: #ffffff url("../img/icon-tick.svg") no-repeat center/21px 16px;
 }
 
 /****** Focused ******/
@@ -54,7 +54,7 @@
 }
 
 .check__input:checked:focus + .check__box {
-  background: #ffffff url(../img/icon-tick.svg) no-repeat center/21px 16px;
+  background: #ffffff url("../img/icon-tick.svg") no-repeat center/21px 16px;
   box-shadow: 0 0 5px 2px $leaf;
 }
 

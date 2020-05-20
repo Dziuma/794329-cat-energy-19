@@ -3,7 +3,7 @@
 
   border-bottom: 1px solid #e6e6e6;
 
-  font-family: Oswald, "Arial Narrow", sans-serif;
+  font-family: $oswald;
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
@@ -32,7 +32,7 @@
 }
 
 .menu--closed .menu__toggle::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 0;
@@ -113,7 +113,7 @@
   }
 
   .menu__item--active::before {
-    content: '';
+    content: "";
 
     position: absolute;
     left: 0;
@@ -140,7 +140,7 @@
     width: 200px;
   }
 
-  #index .menu {
+  .index .menu {
     color: #ffffff;
   }
 
@@ -151,7 +151,7 @@
     line-height: 1.25;
   }
 
-  #index .menu__item--active::before {
+  .index .menu__item--active::before {
     background-color: #ffffff;
   }
 }

@@ -9,7 +9,7 @@
   }
 
   label {
-    font-family: $Oswald;
+    font-family: $oswald;
     font-size: 16px;
     line-height: 1.13;
     text-align: left;
@@ -21,7 +21,7 @@
     padding: 13px 5px 13px 16px;
     border: 1px solid #e6e6e6;
 
-    font-family: $Oswald;
+    font-family: $oswald;
     font-size: 16px;
     line-height: 1.13;
     text-align: left;
@@ -43,7 +43,7 @@
     top: -17px;
     padding: 0 22px 0 18px;
 
-    font-family: $Oswald;
+    font-family: $oswald;
     font-size: 24px;
     line-height: 1;
     text-align: left;
@@ -58,7 +58,7 @@
     padding: 12px 13px;
     border: 1px solid #e6e6e6;
 
-    font-family: $Oswald;
+    font-family: $oswald;
     font-size: 16px;
     line-height: 1.13;
     text-align: left;
@@ -121,21 +121,21 @@
   border-top: 3px solid #68b738;
 }
 
-.form__contacts-item input[type=email] {
+.form__contacts-item input[type="email"] {
   padding-right: 30px;
-  background: url(../img/icon-mail.svg) no-repeat right 15px center/17px 13px;
+  background: url("../img/icon-mail.svg") no-repeat right 15px center/17px 13px;
 
   &:active {
-    background: url(../img/icon-mail-active.svg) no-repeat right 15px center/17px 13px;
+    background: url("../img/icon-mail-active.svg") no-repeat right 15px center/17px 13px;
   }
 }
 
-.form__contacts-item input[type=tel] {
+.form__contacts-item input[type="tel"] {
   padding-right: 30px;
-  background: url(../img/icon-phone.svg) no-repeat right 14px center/20px 20px;
+  background: url("../img/icon-phone.svg") no-repeat right 14px center/20px 20px;
 
   &:active {
-    background: url(../img/icon-phone-active.svg) no-repeat right 14px center/20px 20px;
+    background: url("../img/icon-phone-active.svg") no-repeat right 14px center/20px 20px;
   }
 }
 
@@ -152,7 +152,7 @@
 }
 
 .form__extra-item {
-  margin: 0;;
+  margin: 0;
 }
 
 @import "check.scss";
@@ -167,7 +167,7 @@
 .form__required {
   margin: 0;
 
-  font-family: $Arial;
+  font-family: $arial;
   font-size: 14px;
   line-height: 1.14;
   text-align: center;

@@ -100,11 +100,11 @@ window.matchMedia || (window.matchMedia = function () {
     return str.trim ? str.trim() : str.replace(/^\s+|\s+$/g, "");
   };
 
-	/**
-	 * Gets a string and returns the absolute URL
-	 * @param src
-	 * @returns {String} absolute URL
-	 */
+  /**
+   * Gets a string and returns the absolute URL
+   * @param src
+   * @returns {String} absolute URL
+   */
   pf.makeUrl = (function () {
     var anchor = doc.createElement("a");
     return function (src) {
@@ -113,15 +113,15 @@ window.matchMedia || (window.matchMedia = function () {
     };
   })();
 
-	/**
-	 * Shortcut method for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
-	 */
+  /**
+   * Shortcut method for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
+   */
   pf.restrictsMixedContent = function () {
     return w.location.protocol === "https:";
   };
-	/**
-	 * Shortcut method for matchMedia ( for easy overriding in tests )
-	 */
+  /**
+   * Shortcut method for matchMedia ( for easy overriding in tests )
+   */
 
   pf.matchesMedia = function (media) {
     return w.matchMedia && w.matchMedia(media).matches;
@@ -132,10 +132,10 @@ window.matchMedia || (window.matchMedia = function () {
     return (w.devicePixelRatio || 1);
   };
 
-	/**
-	 * Get width in css pixel value from a "length" value
-	 * http://dev.w3.org/csswg/css-values-3/#length-value
-	 */
+  /**
+   * Get width in css pixel value from a "length" value
+   * http://dev.w3.org/csswg/css-values-3/#length-value
+   */
   pf.getWidthFromLength = function (length) {
     var cssValue;
     // If a length is specified and doesn’t contain a percentage, and it is greater than 0 or using `calc`, use it. Else, abort.
@@ -143,12 +143,12 @@ window.matchMedia || (window.matchMedia = function () {
       return false;
     }
 
-		/**
-		 * If length is specified in  `vw` units, use `%` instead since the div we’re measuring
-		 * is injected at the top of the document.
-		 *
-		 * TODO: maybe we should put this behind a feature test for `vw`? The risk of doing this is possible browser inconsistancies with vw vs %
-		 */
+    /**
+     * If length is specified in  `vw` units, use `%` instead since the div we’re measuring
+     * is injected at the top of the document.
+     *
+     * TODO: maybe we should put this behind a feature test for `vw`? The risk of doing this is possible browser inconsistancies with vw vs %
+     */
     length = length.replace("vw", "%");
 
     // Create a cached element for getting length value widths
@@ -270,16 +270,16 @@ window.matchMedia || (window.matchMedia = function () {
   };
 
   pf.parseSrcset = function (srcset) {
-		/**
-		 * A lot of this was pulled from Boris Smus’ parser for the now-defunct WHATWG `srcset`
-		 * https://github.com/borismus/srcset-polyfill/blob/master/js/srcset-info.js
-		 *
-		 * 1. Let input (`srcset`) be the value passed to this algorithm.
-		 * 2. Let position be a pointer into input, initially pointing at the start of the string.
-		 * 3. Let raw candidates be an initially empty ordered list of URLs with associated
-		 *    unparsed descriptors. The order of entries in the list is the order in which entries
-		 *    are added to the list.
-		 */
+    /**
+     * A lot of this was pulled from Boris Smus’ parser for the now-defunct WHATWG `srcset`
+     * https://github.com/borismus/srcset-polyfill/blob/master/js/srcset-info.js
+     *
+     * 1. Let input (`srcset`) be the value passed to this algorithm.
+     * 2. Let position be a pointer into input, initially pointing at the start of the string.
+     * 3. Let raw candidates be an initially empty ordered list of URLs with associated
+     *    unparsed descriptors. The order of entries in the list is the order in which entries
+     *    are added to the list.
+     */
     var candidates = [];
 
     while (srcset !== "") {
@@ -358,16 +358,16 @@ window.matchMedia || (window.matchMedia = function () {
     return resCandidate || 1;
   };
 
-	/**
-	 * Takes a srcset in the form of url/
-	 * ex. "images/pic-medium.png 1x, images/pic-medium-2x.png 2x" or
-	 *     "images/pic-medium.png 400w, images/pic-medium-2x.png 800w" or
-	 *     "images/pic-small.png"
-	 * Get an array of image candidates in the form of
-	 *      {url: "/foo/bar.png", resolution: 1}
-	 * where resolution is http://dev.w3.org/csswg/css-values-3/#resolution-value
-	 * If sizes is specified, resolution is calculated
-	 */
+  /**
+   * Takes a srcset in the form of url/
+   * ex. "images/pic-medium.png 1x, images/pic-medium-2x.png 2x" or
+   *     "images/pic-medium.png 400w, images/pic-medium-2x.png 800w" or
+   *     "images/pic-small.png"
+   * Get an array of image candidates in the form of
+   *      {url: "/foo/bar.png", resolution: 1}
+   * where resolution is http://dev.w3.org/csswg/css-values-3/#resolution-value
+   * If sizes is specified, resolution is calculated
+   */
   pf.getCandidatesFromSourceSet = function (srcset, sizes) {
     var candidates = pf.parseSrcset(srcset),
       formattedCandidates = [];
@@ -383,12 +383,12 @@ window.matchMedia || (window.matchMedia = function () {
     return formattedCandidates;
   };
 
-	/**
-	 * if it's an img element and it has a srcset property,
-	 * we need to remove the attribute so we can manipulate src
-	 * (the property's existence infers native srcset support, and a srcset-supporting browser will prioritize srcset's value over our winning picture candidate)
-	 * this moves srcset's value to memory for later use and removes the attr
-	 */
+  /**
+   * if it's an img element and it has a srcset property,
+   * we need to remove the attribute so we can manipulate src
+   * (the property's existence infers native srcset support, and a srcset-supporting browser will prioritize srcset's value over our winning picture candidate)
+   * this moves srcset's value to memory for later use and removes the attr
+   */
   pf.dodgeSrcset = function (img) {
     if (img.srcset) {
       img[pf.ns].srcset = img.srcset;
@@ -521,13 +521,13 @@ window.matchMedia || (window.matchMedia = function () {
     return a.resolution - b.resolution;
   };
 
-	/**
-	 * In IE9, <source> elements get removed if they aren't children of
-	 * video elements. Thus, we conditionally wrap source elements
-	 * using <!--[if IE 9]><video style="display: none;"><![endif]-->
-	 * and must account for that here by moving those source elements
-	 * back into the picture element.
-	 */
+  /**
+   * In IE9, <source> elements get removed if they aren't children of
+   * video elements. Thus, we conditionally wrap source elements
+   * using <!--[if IE 9]><video style="display: none;"><![endif]-->
+   * and must account for that here by moving those source elements
+   * back into the picture element.
+   */
   pf.removeVideoShim = function (picture) {
     var videos = picture.getElementsByTagName("video");
     if (videos.length) {
@@ -541,11 +541,11 @@ window.matchMedia || (window.matchMedia = function () {
     }
   };
 
-	/**
-	 * Find all `img` elements, and add them to the candidate list if they have
-	 * a `picture` parent, a `sizes` attribute in basic `srcset` supporting browsers,
-	 * a `srcset` attribute at all, and they haven’t been evaluated already.
-	 */
+  /**
+   * Find all `img` elements, and add them to the candidate list if they have
+   * a `picture` parent, a `sizes` attribute in basic `srcset` supporting browsers,
+   * a `srcset` attribute at all, and they haven’t been evaluated already.
+   */
   pf.getAllElements = function () {
     var elems = [],
       imgs = doc.getElementsByTagName("img");
@@ -691,11 +691,11 @@ window.matchMedia || (window.matchMedia = function () {
     }
   }
 
-	/**
-	 * Sets up picture polyfill by polling the document and running
-	 * the polyfill every 250ms until the document is ready.
-	 * Also attaches picturefill on resize
-	 */
+  /**
+   * Sets up picture polyfill by polling the document and running
+   * the polyfill every 250ms until the document is ready.
+   * Also attaches picturefill on resize
+   */
   function runPicturefill() {
     pf.initTypeDetects();
     picturefill();
