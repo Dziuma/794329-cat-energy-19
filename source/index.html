@@ -133,8 +133,9 @@
 
               <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img class="example__image example__image--before example__image--active" src="img/before-mobile@1x.png"
-                srcset="img/before-mobile@2x.png" width="311" height="232" alt="Пример кота до">
+              <img id="before-img" class="example__image example__image--before example__image--active"
+                src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png" width="311" height="232"
+                alt="Пример кота до">
             </picture>
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
@@ -145,15 +146,15 @@
 
               <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/after-tablet@1x.jpg 1x, img/after-tablet@2x.jpg 2x">
-              <img class="example__image example__image--after" src="img/after-mobile@1x.png"
+              <img id="after-img" class="example__image example__image--after" src="img/after-mobile@1x.png"
                 srcset="img/after-mobile@2x.png" width="311" height="232" alt="Пример кота после">
             </picture>
             <div class="example__toggles">
-              <button class="example__toggles-before" type="button">Было</button>
-              <div class="example__toggles-outer">
+              <button id="before-btn" class="example__toggles-before" type="button">Было</button>
+              <div id="toggler" class="example__toggles-outer">
                 <span class="example__toggles-inner"></span>
               </div>
-              <button class="example__toggles-after" type="button">Стало</button>
+              <button id="after-btn" class="example__toggles-after" type="button">Стало</button>
             </div>
           </div>
         </div>
@@ -227,6 +228,36 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      var beforeBtn = document.getElementById("before-btn");
+      var afterBtn = document.getElementById("after-btn");
+
+      beforeBtn.addEventListener("click", function () {
+        var beforeImage = document.getElementById("before-img");
+        var afterImage = document.getElementById("after-img");
+        var toggler = document.getElementById("toggler");
+
+        if (!beforeImage.classList.contains("example__image--active")) {
+          afterImage.classList.remove("example__image--active");
+          beforeImage.classList.add("example__image--active");
+          toggler.style.justifyContent = "flex-start";
+          console.log(toggler);
+        }
+      });
+
+      afterBtn.addEventListener("click", function () {
+        var afterImage = document.getElementById("after-img");
+        var beforeImage = document.getElementById("before-img");
+        var toggler = document.getElementById("toggler");
+
+        if (!afterImage.classList.contains("example__image--active")) {
+          beforeImage.classList.remove("example__image--active");
+          afterImage.classList.add("example__image--active");
+          toggler.style.justifyContent = "flex-end";
+        }
+      });
+    </script>
   </div>
 
 </body>
