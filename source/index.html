@@ -228,38 +228,37 @@
         </p>
       </div>
     </footer>
-
-    <script>
-      var beforeBtn = document.getElementById("before-btn");
-      var afterBtn = document.getElementById("after-btn");
-
-      beforeBtn.addEventListener("click", function () {
-        var beforeImage = document.getElementById("before-img");
-        var afterImage = document.getElementById("after-img");
-        var toggler = document.getElementById("toggler");
-
-        if (!beforeImage.classList.contains("example__image--active")) {
-          afterImage.classList.remove("example__image--active");
-          beforeImage.classList.add("example__image--active");
-          toggler.style.justifyContent = "flex-start";
-          console.log(toggler);
-        }
-      });
-
-      afterBtn.addEventListener("click", function () {
-        var afterImage = document.getElementById("after-img");
-        var beforeImage = document.getElementById("before-img");
-        var toggler = document.getElementById("toggler");
-
-        if (!afterImage.classList.contains("example__image--active")) {
-          beforeImage.classList.remove("example__image--active");
-          afterImage.classList.add("example__image--active");
-          toggler.style.justifyContent = "flex-end";
-        }
-      });
-    </script>
   </div>
 
+  <script>
+    var beforeBtn = document.getElementById("before-btn");
+    var afterBtn = document.getElementById("after-btn");
+
+    beforeBtn.addEventListener("click", function () {
+      var beforeImage = document.getElementById("before-img");
+      var afterImage = document.getElementById("after-img");
+      var toggler = document.getElementById("toggler");
+
+      if (!beforeImage.classList.contains("example__image--active")) {
+        afterImage.classList.remove("example__image--active");
+        beforeImage.classList.add("example__image--active");
+        toggler.style.justifyContent = "flex-start";
+        console.log(toggler);
+      }
+    });
+
+    afterBtn.addEventListener("click", function () {
+      var afterImage = document.getElementById("after-img");
+      var beforeImage = document.getElementById("before-img");
+      var toggler = document.getElementById("toggler");
+
+      if (!afterImage.classList.contains("example__image--active")) {
+        beforeImage.classList.remove("example__image--active");
+        afterImage.classList.add("example__image--active");
+        toggler.style.justifyContent = "flex-end";
+      }
+    });
+  </script>
 </body>
 
 </html>
